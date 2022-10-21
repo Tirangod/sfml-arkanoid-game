@@ -199,16 +199,19 @@ bool isBallCollided(Ball *ball, RectangleShape *other)
 */
 void bounceOff(Ball *ball, Shape *other)
 {
+    ball->moveDir->y *= -1;
+
+    /*    
     auto ballPos = ball->shape->getPosition();
     auto r = ball->shape->getRadius();
     auto otherPos = other->getPosition();
     auto otherBounds = other->getGlobalBounds();
 
-    
     if ((ballPos.x < otherPos.x - otherBounds.width / 2) || (ballPos.x > otherPos.x + otherBounds.width / 2))
         ball->moveDir->x *= -1;
     if ((ballPos.y < otherPos.y - otherBounds.height / 2) || (ballPos.y > otherPos.y + otherBounds.height / 2))
         ball->moveDir->y *= -1;
+    */
 }
 
 /**
